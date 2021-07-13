@@ -101,7 +101,7 @@ export class VehiclesFormComponent implements OnInit {
       const mutation = Object.assign(new CreateVechicle(), value);
       this.mutationsHandler.handle(mutation).subscribe(
         (rs) => this.close(),
-        () => this.snackService.open('Falha ao salvar veículo!')
+        () => this.snackService.open('Falha ao criar veículo!')
       );
     } else {
       value.id = this.id;

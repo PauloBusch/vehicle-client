@@ -72,7 +72,7 @@ export class BrandsFormComponent implements OnInit {
           const msgDuplicateName = 'Brand with Name already exists';
           if (err.status === EStatusCode.conflict && result.message.indexOf(msgDuplicateName) !== -1)
             return this.snackService.open('Já existe uma marca com este nome!');
-          this.snackService.open('Falha ao atualizar marca!');
+          this.snackService.open('Falha ao criar marca!');
         }
       );
     } else {
@@ -85,7 +85,7 @@ export class BrandsFormComponent implements OnInit {
           const msgDuplicateName = 'Brand with Name already exists';
           if (err.status === EStatusCode.conflict && result.message.indexOf(msgDuplicateName) !== -1)
             return this.snackService.open('Já existe uma marca com este nome!');
-          this.snackService.open('Falha ao salvar marca!');
+          this.snackService.open('Falha ao atualizar marca!');
         }
       );
     }

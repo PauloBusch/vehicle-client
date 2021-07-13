@@ -104,7 +104,7 @@ export class ReservationsFormComponent implements OnInit {
           const msgDuplicateName = 'Contact with ContactPhone already exists';
           if (err.status === EStatusCode.conflict && result.message.indexOf(msgDuplicateName) !== -1)
             return this.snackService.open('Já existe uma reserva com este telefone!');
-          this.snackService.open('Falha ao salvar reserva!');
+          this.snackService.open('Falha ao criar reserva!');
         }
       );
     } else {

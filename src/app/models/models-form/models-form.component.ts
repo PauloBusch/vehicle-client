@@ -81,7 +81,7 @@ export class ModelsFormComponent implements OnInit {
           const msgDuplicateName = 'Model with Name already exists';
           if (err.status === EStatusCode.conflict && result.message.indexOf(msgDuplicateName) !== -1)
             return this.snackService.open('Já existe um modelo com este nome!');
-          this.snackService.open('Falha ao salvar modelo!');
+          this.snackService.open('Falha ao criar modelo!');
         }
       );
     } else {

@@ -11,7 +11,7 @@
                         <input class="form-control" [typeaheadMinLength]="0" [typeahead]="colors" (keyup.enter)="search()" (typeaheadOnSelect)="query.colorId=$event.item.id; search()" [(ngModel)]="queryClient.colorName" typeaheadOptionField="name" placeholder="Cor"/>
                     </div>
                     <div class="form-group col-3">
-                        <input class="form-control" [typeaheadMinLength]="0" [typeahead]="brands" (keyup.enter)="loadModels($event.item.id); search()" (typeaheadOnSelect)="query.brandId=$event.item.id; loadModels($event.item.id); search()" [(ngModel)]="queryClient.brandName" typeaheadOptionField="name" placeholder="Marca"/>
+                        <input class="form-control" [typeaheadMinLength]="0" [typeahead]="brands" (keyup.enter)="$event.item ? loadModels($event.item.id) : false; search()" (typeaheadOnSelect)="query.brandId=$event.item.id; loadModels($event.item.id); search()" [(ngModel)]="queryClient.brandName" typeaheadOptionField="name" placeholder="Marca"/>
                     </div>
                     <div class="form-group col-3">
                         <input class="form-control" [typeaheadMinLength]="0" [typeahead]="models" (keyup.enter)="search()" (typeaheadOnSelect)="query.modelId=$event.item.id; search()" [(ngModel)]="queryClient.modelName" typeaheadOptionField="name" placeholder="Modelo"/>
@@ -45,7 +45,7 @@
                         <span class="card-text text-info"><strong>Cor:</strong> {{ announcement.vehicleColorName }}</span>
                     </div>
                     <div class="card-footer row"> 
-                        <button class="btn btn-light col align-self-end" (click)="purchase(announcement.id)">Comparar</button>
+                        <button class="btn btn-light col align-self-end" (click)="purchase(announcement.id)">Comprar</button>
                     </div>
                   </div>
             </div>

@@ -11,7 +11,7 @@
                     <input type="text" class="form-control" (keyup.enter)="filter()" [(ngModel)]="queryClient.contactName" placeholder="Cliente"/>
                 </div>
                 <div class="form-group col-3">
-                    <input class="form-control" [typeaheadMinLength]="0" [typeahead]="brands" (keyup.enter)="loadModels($event.item.id); filter()" (typeaheadOnSelect)="loadModels($event.item.id); filter()" [(ngModel)]="queryClient.brandName" typeaheadOptionField="name" placeholder="Marca"/>
+                    <input class="form-control" [typeaheadMinLength]="0" [typeahead]="brands" (keyup.enter)="$event.item ? loadModels($event.item.id) : false; filter()" (typeaheadOnSelect)="loadModels($event.item.id); filter()" [(ngModel)]="queryClient.brandName" typeaheadOptionField="name" placeholder="Marca"/>
                 </div>
                 <div class="form-group col-3">
                     <input class="form-control" [typeaheadMinLength]="0" [typeahead]="models" (keyup.enter)="filter()" (typeaheadOnSelect)="filter()" [(ngModel)]="queryClient.modelName" typeaheadOptionField="name" placeholder="Modelo"/>

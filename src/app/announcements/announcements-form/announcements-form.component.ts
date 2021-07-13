@@ -88,7 +88,7 @@ export class AnnouncementsFormComponent implements OnInit {
       const mutation = Object.assign(new CreateAnnouncement(), value);
       this.mutationsHandler.handle(mutation).subscribe(
         (rs) => this.close(),
-        () => this.snackService.open('Falha ao salvar anúncio!')
+        () => this.snackService.open('Falha ao criar anúncio!')
       );
     } else {
       value.id = this.id;
