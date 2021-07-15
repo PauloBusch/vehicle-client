@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
 export class CreateVechicle implements IMutation {
     public id: string;
     public year: number;
+    public board: string;
     public fuelId: string;
     public colorId: string;
     public modelId: string;

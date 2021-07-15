@@ -59,6 +59,7 @@ export class VehiclesFormComponent implements OnInit {
     this.form = this.formBuilder.group({
       imageBase64: new FormControl(''),
       year: new FormControl(null, [Validators.min(1950), Validators.required]),
+      board: new FormControl(null, [Validators.maxLength(10), Validators.required]),
       colorId: new FormControl(null, [Validators.required]),
       fuelId: new FormControl(null, [Validators.required]),
       brandId: new FormControl(null, [Validators.required]),

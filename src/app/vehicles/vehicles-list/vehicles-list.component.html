@@ -33,6 +33,7 @@
         </div>
         <table *ngIf="listState.done" class="table table-striped table-bordered table-hover">
             <thead>
+                <th>Placa</th>
                 <th>Ano</th>
                 <th>Cor</th>
                 <th>Marca</th>
@@ -42,6 +43,7 @@
             </thead>
             <tbody>
                 <tr *ngFor="let vehicle of vehiclesFiltred">
+                    <td (click)="open(vehicle.id)">{{ vehicle.board }}</td>
                     <td (click)="open(vehicle.id)">{{ vehicle.year }}</td>
                     <td (click)="open(vehicle.id)">{{ vehicle.colorName }}</td>
                     <td (click)="open(vehicle.id)">{{ vehicle.brandName }}</td>

@@ -18,6 +18,10 @@
                 </div>
                 <div class="col-6">
                     <div class="form-group row">
+                        <input class="form-control" formControlName="board" [class.is-invalid]="!isValidField('board')" placeholder="Placa">
+                        <div class="invalid-feedback">O campo placa deve ser informado!</div>
+                    </div>
+                    <div class="form-group row">
                         <input type="number" class="form-control" formControlName="year" [class.is-invalid]="!isValidField('year')" placeholder="Ano">
                         <div class="invalid-feedback">O campo ano deve ser válido!</div>
                     </div>
