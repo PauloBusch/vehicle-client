@@ -3,7 +3,7 @@
         <div class="filters">
             <div class="row">
                 <div class="form-group col-1">
-                    <svg class="bi bi-plus-circle-fill pointer" style="color: green; margin-left: 5px" [routerLink]="['new']" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="bi bi-plus-circle-fill pointer" tooltip="Cadastrar" style="color: green; margin-left: 5px" [routerLink]="['new']" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M16 8A8 8 0 110 8a8 8 0 0116 0zM8.5 4a.5.5 0 00-1 0v3.5H4a.5.5 0 000 1h3.5V12a.5.5 0 001 0V8.5H12a.5.5 0 000-1H8.5V4z" clip-rule="evenodd"/>
                     </svg>
                 </div>
@@ -17,7 +17,7 @@
                     <input class="form-control" [typeaheadMinLength]="0" [typeahead]="models" (keyup.enter)="filter()" (typeaheadOnSelect)="filter()" [(ngModel)]="queryClient.modelName" typeaheadOptionField="name" placeholder="Modelo"/>
                 </div>
                 <div  class="form-group col-1 ml-auto">
-                    <svg class="bi bi-search pointer" (click)="filter()" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="bi bi-search pointer" (click)="filter()" tooltip="Filtrar" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z" clip-rule="evenodd"/>
                         <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" clip-rule="evenodd"/>
                     </svg>
@@ -44,11 +44,11 @@
                     <td (click)="open(reservation.id)">{{ reservation.vehicleModelName }}</td>
                     <td>
                         <div class="row justify-content-around">
-                            <svg class="bi bi-check-circle" (click)="finish(reservation.id)" style="color: grey;"  width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="bi bi-check-circle" (click)="finish(reservation.id)" tooltip="Finalizar" style="color: grey;"  width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M15.354 2.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3-3a.5.5 0 11.708-.708L8 9.293l6.646-6.647a.5.5 0 01.708 0z" clip-rule="evenodd"/>
                                 <path fill-rule="evenodd" d="M8 2.5A5.5 5.5 0 1013.5 8a.5.5 0 011 0 6.5 6.5 0 11-3.25-5.63.5.5 0 11-.5.865A5.472 5.472 0 008 2.5z" clip-rule="evenodd"/>
                             </svg>
-                            <svg class="bi bi-trash-fill" (click)="remove(reservation.id)" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="bi bi-trash-fill" (click)="remove(reservation.id)" tooltip="Remover" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M2.5 1a1 1 0 00-1 1v1a1 1 0 001 1H3v9a2 2 0 002 2h6a2 2 0 002-2V4h.5a1 1 0 001-1V2a1 1 0 00-1-1H10a1 1 0 00-1-1H7a1 1 0 00-1 1H2.5zm3 4a.5.5 0 01.5.5v7a.5.5 0 01-1 0v-7a.5.5 0 01.5-.5zM8 5a.5.5 0 01.5.5v7a.5.5 0 01-1 0v-7A.5.5 0 018 5zm3 .5a.5.5 0 00-1 0v7a.5.5 0 001 0v-7z" clip-rule="evenodd"/>
                             </svg>
                         </div>
