@@ -8,7 +8,7 @@ import { EOrder } from 'src/app/shared/enums/order';
 
 export class ListAnnouncement implements IQuery<AnnouncementList[]> {
     public page: number = 1;
-    public limit: number = 10;
+    public limit: number = 100;
     public sortColumn: string;
     public sortOrder: EOrder;
     public year: number;

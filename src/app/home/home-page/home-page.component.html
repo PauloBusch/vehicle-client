@@ -50,7 +50,7 @@
                   </div>
             </div>
         </div>
-        <div class="pagination" *ngIf="listState.done">
+        <div class="pagination" *ngIf="listState.done && listState.totalRows > query.limit">
             <div>
                 <select [(ngModel)]="query.limit" (change)="search()">
                     <option value="10">10</option>
