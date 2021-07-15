@@ -1,5 +1,36 @@
 .contact {
-    margin-top: 10px;
+    margin-top: 35vh;
+    transform: translateY(-50%);
 }
 
-.contact div span:nth-child(1) { text-align: end; }
+.contact ul {
+    width: 100%;
+    text-align: center;
+    list-style: none;
+}
+
+.contact ul li {
+    text-align: center;
+    color: rgba(0, 0, 0, .7);
+    font-size: 18px;
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact a {
+    transition: .2s;
+    opacity: .7;
+    color: black;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    opacity: 1;
+}
+
+.contact i {
+    width: 30px;
+    text-align: center;
+}
